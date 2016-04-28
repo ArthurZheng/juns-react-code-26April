@@ -10,7 +10,7 @@ class ShoppingCartContainer extends React.Component{
       total: 0
     }
     // this.handleClick = () => this.handleClick();
-    this.handleClick = this.handleClick.bind(this); // using Function.prototype.bind();
+    // this.handleClick = this.handleClick.bind(this); // using Function.prototype.bind();
     this.decreaseQuantity = this.decreaseQuantity.bind(this);
     this.increaseQuantity = this.increaseQuantity.bind(this);
   }
@@ -47,7 +47,7 @@ class ShoppingCartContainer extends React.Component{
       <ShoppingCart
         increaseQuantity={this.increaseQuantity}
         decreaseQuantity={this.decreaseQuantity}
-        handleClick={this.handleClick}
+        handleClick={ () => this.handleClick()}
         quantity={this.state.quantity}
         total={this.state.total}
       />

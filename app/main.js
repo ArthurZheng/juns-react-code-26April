@@ -9,6 +9,8 @@ import FilteredList from '../components/filtered_list';
 
 import QuoteListContainer from '../containers/quote_list_container';
 import ShoppingCartContainer from '../containers/shopping_cart_container';
+import CounterES6 from '../components/counter_es6class';
+import StatelessComponentContainer from '../containers/stateless_component_container';
 
 let rootElement = document.getElementById('content');
 ReactDOM.render(
@@ -18,6 +20,8 @@ ReactDOM.render(
     <FilteredList />
     <QuoteListContainer />
     <ShoppingCartContainer />
+    <CounterES6 initialCount={'hello-world'}/>
+    <StatelessComponentContainer words={'have a good day'}/>
   </div>,
   rootElement
 );

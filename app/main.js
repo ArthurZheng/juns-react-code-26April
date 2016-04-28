@@ -8,6 +8,7 @@ import Counter from '../components/counter';
 import FilteredList from '../components/filtered_list';
 
 import QuoteListContainer from '../containers/quote_list_container';
+import ShoppingCartContainer from '../containers/shopping_cart_container';
 
 let rootElement = document.getElementById('content');
 ReactDOM.render(
@@ -16,6 +17,7 @@ ReactDOM.render(
     <Counter />
     <FilteredList />
     <QuoteListContainer />
+    <ShoppingCartContainer />
   </div>,
   rootElement
 );

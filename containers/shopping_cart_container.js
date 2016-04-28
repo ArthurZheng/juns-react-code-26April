@@ -2,16 +2,17 @@ import React from 'react';
 import ShoppingCart from '../components/shopping_cart';
 
 class ShoppingCartContainer extends React.Component{
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state ={
       price: 60,
       quantity: 5,
       total: 0
     }
-    this.handleClick = this.handleClick.bind(this);
-    this.increaseQuantity = this.increaseQuantity.bind(this);
+    // this.handleClick = () => this.handleClick();
+    this.handleClick = this.handleClick.bind(this); // using Function.prototype.bind();
     this.decreaseQuantity = this.decreaseQuantity.bind(this);
+    this.increaseQuantity = this.increaseQuantity.bind(this);
   }
 
   increaseQuantity(){

@@ -1,7 +1,7 @@
 import React from 'react';
 import ShoppingCart from '../components/shopping_cart';
 
-export default class ShoppingCartContainer extends React.Component{
+class ShoppingCartContainer extends React.Component{
   constructor(){
     super();
     this.state ={
@@ -53,3 +53,19 @@ export default class ShoppingCartContainer extends React.Component{
     )
   }
 }
+
+ShoppingCartContainer.propTypes = {
+  title: React.PropTypes.string.isRequired,
+  quantity: React.PropTypes.number.isRequired,
+  price: React.PropTypes.number.isRequired,
+  total: React.PropTypes.number.isRequired
+};
+
+ShoppingCartContainer.defaultProps = {
+  title: 'Default Title',
+  price: 8888,
+  quantity: 11,
+  total: -1
+};
+
+export default ShoppingCartContainer;
